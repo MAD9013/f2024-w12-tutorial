@@ -1,0 +1,13 @@
+/* ---------- Banner ---------- */
+
+.banner--hero {
+  background-image: url("../images/hero-animation.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--color-primary--light);
+  color: #fff;
+  padding-block-end: 3rem;
+}
+
+/* ---------- Loaders ---------- */

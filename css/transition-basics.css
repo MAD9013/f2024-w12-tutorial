@@ -1,0 +1,80 @@
+/* ---------- Introduction ---------- */
+
+.box--simple {
+}
+
+.box--simple:hover,
+.box--simple:focus {
+  border-color: var(--color-blue--dark);
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+.box--shorthand {
+}
+
+.box--shorthand:hover {
+  border-color: var(--color-green--light);
+  background-color: var(--color-green);
+  color: #fff;
+}
+
+/* ---------- Properties ---------- */
+
+.box--width {
+}
+
+.box--width:hover {
+}
+
+.box--left {
+}
+
+.box--left:hover {
+}
+
+.flex {
+  display: flex;
+}
+
+.flex:hover {
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid:hover {
+}
+
+/* ---------- Timing Functions ---------- */
+
+.timing .box {
+  width: 12rem;
+  position: relative;
+  left: 0;
+  transition: left 1s, translate 1s;
+}
+
+.timing:hover .box {
+}
+
+.timing .linear {
+}
+
+.timing .ease {
+}
+
+.timing .ease-in {
+}
+
+.timing .ease-out {
+}
+
+.timing .ease-in-out {
+}
+
+.timing .cubic-bezier {
+}

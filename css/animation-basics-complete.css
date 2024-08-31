@@ -1,0 +1,66 @@
+.box--rotate {
+  width: max-content;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.box--shift {
+  width: max-content;
+  animation: shift 1s 1s alternate infinite cubic-bezier(0.9, -0.35, 0.1, 1.37);
+}
+
+@keyframes shift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40rem);
+  }
+}
+
+.box--multi-step {
+  width: max-content;
+  animation: multiStep 2s infinite;
+  background-color: var(--color-orange);
+  border-width: 0.25rem;
+}
+
+@keyframes multiStep {
+  0% {
+    transform: translate(0, 0);
+    background-color: var(--color-orange);
+    border-width: 0.25rem;
+  }
+  25% {
+    transform: translate(0, 10rem) rotate(0);
+    background-color: var(--color-purple);
+    border-width: 0.75rem;
+  }
+  50% {
+    transform: translate(10rem, 10rem) rotate(180deg);
+    background-color: var(--color-yellow);
+    border-width: 0.25rem;
+  }
+  75% {
+    transform: translate(10rem, 0) rotate(-180deg);
+    background-color: var(--color-cyan);
+    border-width: 0.75rem;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    background-color: var(--color-orange);
+    border-width: 0.25rem;
+  }
+}

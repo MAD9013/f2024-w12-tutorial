@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Transition Basics | W12 - Transitions & Animations</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/animation-basics.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 12</span>
+            <span class="navbar__title">Transitions &amp; Animations</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./transition-basics.html" class="navbar__link">
+                Transition Basics
+              </a>
+            </li>
+            <li>
+              <a href="./transition-playground.html" class="navbar__link">
+                Transition Playground
+              </a>
+            </li>
+            <li>
+              <a
+                href="./animation-basics.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Animation Basics
+              </a>
+            </li>
+            <li>
+              <a href="./animation-playground.html" class="navbar__link">
+                Animation Playground
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Animation Basics</h1>
+            <p class="banner__byline">
+              Animations allow us to create movement on our web pages. We can
+              create animation that make elements appear on the page, create
+              continuous looping animations, and so much more!
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Introduction to Animation</h2>
+          <p>
+            Are used to create more complex motion onto our web pages. They are
+            best used for continuous motion and animations that play on page
+            load.
+          </p>
+          <div class="box box--rotate">Rotate</div>
+          <div class="box box--shift">Shift</div>
+          <div class="box box--multi-step">Multi-Step</div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <aside>
+      <div class="container">
+        <h2>Transition or Animation?</h2>
+        <p>
+          <strong>Transitions</strong> should be used when you need to create a
+          smooth transition between two states, often also associated with a
+          user action/interactivity. For example: between a default state and a
+          <code>:hover</code>/<code>:focus</code> state or when opening/closing
+          a navigation menu.
+        </p>
+        <p>
+          <strong>Animations</strong> should be used when you you want motion to
+          be applied automatically or to repeat. For example: on page load have
+          the banner content automatically slide in, or have a decorative
+          looping animation.
+        </p>
+      </div>
+    </aside>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 12</span>
+            <span class="footer__title">Forms &amp; Tables</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/f2024/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

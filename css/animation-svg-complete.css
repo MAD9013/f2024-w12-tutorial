@@ -1,0 +1,157 @@
+.windmill-fins {
+  animation: windmillFins 2s infinite linear;
+}
+
+#windmill-fins-3 {
+  transform-origin: 699.5839px 310.7516px;
+  animation-duration: 1.75s;
+}
+
+#windmill-fins-2 {
+  transform-origin: 449.288px 259.7416px;
+  animation-duration: 2.25s;
+}
+
+#windmill-fins-1 {
+  transform-origin: 250.7012px 231.9783px;
+}
+
+@keyframes windmillFins {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#sun {
+  transform-origin: 196.0594px 528.4599px;
+  animation: sun 25s infinite linear;
+}
+
+@keyframes sun {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  10% {
+    transform: scale(1.2) rotate(.1turn);
+  }
+  20% {
+    transform: scale(1) rotate(.2turn);
+  }
+  30% {
+    transform: scale(1.2) rotate(.3turn);
+  }
+  40% {
+    transform: scale(1) rotate(.4turn);
+  }
+  50% {
+    transform: scale(1.2) rotate(.5turn);
+  }
+  60% {
+    transform: scale(1) rotate(.6turn);
+  }
+  70% {
+    transform: scale(1.2) rotate(.7turn);
+  }
+  80% {
+    transform: scale(1) rotate(.8turn);
+  }
+  90% {
+    transform: scale(1.2) rotate(.9turn);
+  }
+  100% {
+    transform: scale(1) rotate(1turn);
+  }
+}
+
+#cloud-1 {
+  transform: translate(-25rem);
+  animation: cloudOne 15s linear infinite;
+}
+
+@keyframes cloudOne {
+  from {
+    transform: translate(-25rem);
+  }
+  to {
+    transform: translate(90rem);
+  }
+}
+
+#cloud-2 {
+  transform: translate(-52rem);
+  animation: cloudTwo 20s 5s linear infinite;
+}
+
+@keyframes cloudTwo {
+  from {
+    transform: translate(-52rem);
+  }
+  to {
+    transform: translate(63rem);
+  }
+}
+
+#cloud-3 {
+  transform: translate(-83rem);
+  animation: cloudThree 15s 10s linear infinite;
+}
+
+@keyframes cloudThree {
+  from {
+    transform: translate(-83rem);
+  }
+  to {
+    transform: translate(32rem);
+  }
+}
+
+.wind {
+  stroke-dasharray: 214.996px 644.988px;
+  stroke-dashoffset: 214.996px;
+  animation: wind 5s 2s infinite;
+}
+
+#wind-2 {
+  animation-delay: 2.25s;
+}
+
+#wind-3 {
+  animation-delay: 2.5s;
+}
+
+@keyframes wind {
+  0% {
+    stroke-dashoffset: 214.996px;
+  }
+  25% {
+    stroke-dashoffset: -644.988px;
+  }
+  100% {
+    stroke-dashoffset: -644.988px;
+  }
+}
+
+#banner-content {
+  animation: content 5s 2.5s infinite;
+}
+
+@keyframes content {
+  0% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(2rem);
+  }
+  20% {
+    transform: translateX(-.5rem);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

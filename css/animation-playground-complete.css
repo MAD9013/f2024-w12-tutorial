@@ -1,0 +1,108 @@
+/* ---------- Banner ---------- */
+
+.banner--hero {
+  background-image: url("../images/hero-animation.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--color-primary--light);
+  color: #fff;
+  padding-block-end: 3rem;
+
+  .banner__headline,
+  .banner__byline,
+  .btn {
+    translate: -3rem;
+    opacity: 0;
+    animation: slide_in 0.5s 1s forwards;
+  }
+
+  .banner__byline {
+    animation-delay: 1.2s;
+  }
+
+  .btn {
+    animation-delay: 1.4s;
+  }
+}
+
+@keyframes slide_in {
+  from {
+    translate: -3rem;
+    opacity: 0;
+  }
+
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
+/* ---------- Loaders ---------- */
+
+.loader {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  display: inline-block;
+  margin-inline-end: 2rem;
+}
+
+.loader__circle {
+  border: 1rem solid var(--color-green);
+  scale: 0;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: loader--grow;
+  position: absolute;
+}
+
+.loader__circle--delayed {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader--grow {
+  0% {
+    scale: 0;
+    border-width: 1rem;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+.loader__spinner {
+  fill: none;
+  stroke-width: 0.25rem;
+  stroke-dasharray: 101.09px 201.09px;
+  stroke-dashoffset: 101.09px;
+  rotate: -90deg;
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.75, 0, 0.25, 1);
+  animation-iteration-count: infinite;
+
+  circle {
+    stroke: var(--color-blue);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    stroke-dashoffset: 101.09px;
+    rotate: -90deg;
+  }
+  100% {
+    stroke-dashoffset: -201.09px;
+    rotate: 630deg;
+  }
+}
