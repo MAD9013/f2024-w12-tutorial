@@ -54,7 +54,7 @@
 .timing .box {
   width: 12rem;
   position: relative;
-  left: 0;
+  inset-inline-start: 0;
   transition: left 1s, translate 1s;
 }
 

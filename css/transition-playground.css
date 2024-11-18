@@ -37,10 +37,6 @@
 
 .card__content {
   padding: 1.5rem;
-
-  :last-child {
-    margin-block-end: 0;
-  }
 }
 
 .card__title {
@@ -56,6 +52,17 @@
 @media only screen and (min-width: 60em) {
   .card__title {
     font-size: 1.777rem;
+  }
+}
+
+.card--full-hover {
+  position: relative;
+
+  a::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    inset: 0;
   }
 }
 
@@ -81,5 +88,9 @@
   .card__title,
   .card__text {
     color: #fff;
+  }
+
+  .card__text {
+    margin-block-end: 0;
   }
 }

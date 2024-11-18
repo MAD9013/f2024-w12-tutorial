@@ -37,11 +37,11 @@
 .box--left {
   position: relative;
   transition: left 0.5s;
-  left: 0;
+  inset-inline-start: 0;
 }
 
 .box--left:hover {
-  left: 5rem;
+  inset-inline-start: 5rem;
 }
 
 .flex {
@@ -71,12 +71,12 @@
 .timing .box {
   width: 12rem;
   position: relative;
-  left: 0;
+  inset-inline-start: 0;
   transition: left 1s, translate 1s;
 }
 
 .timing:hover .box {
-  left: 100%;
+  inset-inline-start: 100%;
   translate: -100%;
 }
 

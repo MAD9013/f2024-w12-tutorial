@@ -26,11 +26,6 @@
   box-shadow: var(--shadow--subtle);
   color: var(--color-primary);
   transition: box-shadow 0.2s, translate 0.2s;
-
-  &:where(:hover, :focus) {
-    box-shadow: var(--shadow);
-    translate: 0 -1.5rem;
-  }
 }
 
 .card__img {
@@ -43,10 +38,6 @@
 
 .card__content {
   padding: 1.5rem;
-
-  :last-child {
-    margin-block-end: 0;
-  }
 }
 
 .card__title {
@@ -62,6 +53,26 @@
 @media only screen and (min-width: 60em) {
   .card__title {
     font-size: 1.777rem;
+  }
+}
+
+.card--full-hover {
+  position: relative;
+
+  a::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.card--shadow {
+  transition: box-shadow 0.2s, translate 0.2s;
+
+  &:has(a:where(:hover, :focus)) {
+    box-shadow: var(--shadow);
+    translate: 0 -1.5rem;
   }
 }
 
@@ -98,7 +109,11 @@
     transition-delay: 0.05s;
   }
 
-  &:where(:hover, :focus) {
+  .card__text {
+    margin-block-end: 0;
+  }
+
+  &:has(a:where(:hover, :focus)) {
     box-shadow: var(--shadow--subtle);
     translate: 0;
 

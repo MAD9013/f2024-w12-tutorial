@@ -9,10 +9,10 @@
 
 @keyframes rotate {
   from {
-    transform: rotate(0);
+    rotate: 0;
   }
   to {
-    transform: rotate(1turn);
+    rotate: 1turn;
   }
 }
 
@@ -23,10 +23,10 @@
 
 @keyframes shift {
   0% {
-    transform: translateX(0);
+    translate: 0;
   }
   100% {
-    transform: translateX(40rem);
+    translate: 40rem;
   }
 }
 
@@ -39,27 +39,31 @@
 
 @keyframes multiStep {
   0% {
-    transform: translate(0, 0);
+    translate: 0 0;
     background-color: var(--color-orange);
     border-width: 0.25rem;
   }
   25% {
-    transform: translate(0, 10rem) rotate(0);
+    translate: 0 10rem;
+    rotate: 0;
     background-color: var(--color-purple);
     border-width: 0.75rem;
   }
   50% {
-    transform: translate(10rem, 10rem) rotate(180deg);
+    translate: 10rem 10rem;
+    rotate: 180deg;
     background-color: var(--color-yellow);
     border-width: 0.25rem;
   }
   75% {
-    transform: translate(10rem, 0) rotate(-180deg);
+    translate: 10rem 0;
+    rotate: -180deg;
     background-color: var(--color-cyan);
     border-width: 0.75rem;
   }
   100% {
-    transform: translate(0, 0) rotate(0);
+    translate: 0 0;
+    rotate: 0;
     background-color: var(--color-orange);
     border-width: 0.25rem;
   }
